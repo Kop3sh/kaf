@@ -17,6 +17,7 @@ This task is preferably done using Django & flutter.
     - [] get - search for name and get its corresponding salary and percent.
 - [] upload file validation
 - [] setup admin panel
+- [] env variables
 ### lower priority
 - [] tests
     - [] excel file upload
