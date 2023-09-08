@@ -10,7 +10,7 @@ This task is preferably done using Django & flutter.
 
 
 ## Backend
-- [] setup postgres
+- [x] setup postgres
 - [] db schema, models and migrations (NB. decimal values)
 - [] routes
     - [] post - upload excel file and handling conversion/ serializtion from excel into db
