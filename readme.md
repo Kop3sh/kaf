@@ -16,7 +16,7 @@ This task is preferably done using Django & flutter.
     - [x] post - upload excel file and handling conversion/ serializtion from excel into db
     - [x] get - search for name and get its corresponding salary and percent.
 - [] upload file validation
-- [] setup admin panel
+- [x] setup admin panel
 - [] env variables
 ### lower priority
 - [] tests
