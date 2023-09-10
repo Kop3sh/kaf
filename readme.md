@@ -11,9 +11,9 @@ This task is preferably done using Django & flutter.
 
 ## Backend
 - [x] setup postgres
-- [] db schema, models and migrations (NB. decimal values)
+- [x] db schema, models and migrations (NB. decimal values)
 - [] routes
-    - [] post - upload excel file and handling conversion/ serializtion from excel into db
+    - [x] post - upload excel file and handling conversion/ serializtion from excel into db
     - [] get - search for name and get its corresponding salary and percent.
 - [] upload file validation
 - [] setup admin panel
