@@ -6,6 +6,22 @@ import pandas as pd
 from tablib import Dataset
 
 from .models import CustomerResource, Customer
+from .serializers import CustomerSerializer
+
+
+class CustomersList(generics.ListAPIView):
+    serializer_class = CustomerSerializer
+
+    def get_queryset(self):
+        """
+        Optionally restricts the returned purchases to a given user,
+        by filtering against a `username` query parameter in the URL.
+        """
+        queryset = Customer.objects.all()
+        name = self.request.query_params.get("name")
+        if name is not None:
+            queryset = queryset.filter(name__icontains=name)
+        return queryset
 
 
 class ImportCustomerData(generics.GenericAPIView):

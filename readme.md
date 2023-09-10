@@ -12,9 +12,9 @@ This task is preferably done using Django & flutter.
 ## Backend
 - [x] setup postgres
 - [x] db schema, models and migrations (NB. decimal values)
-- [] routes
+- [x] routes
     - [x] post - upload excel file and handling conversion/ serializtion from excel into db
-    - [] get - search for name and get its corresponding salary and percent.
+    - [x] get - search for name and get its corresponding salary and percent.
 - [] upload file validation
 - [] setup admin panel
 - [] env variables
