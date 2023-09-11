@@ -23,3 +23,17 @@ This task is preferably done using Django & flutter.
 - [] tests
     - [] excel file upload
     - [] reading data
+
+## Frontend
+- [] flutter setup
+- [] model schema and serialization
+- [] UI/UX
+    - [] listview for customer data
+    - [] single name view, showing salary and percentage data
+    - [] basic name search functionality
+    - [] upload excel data button
+- [] API integration
+### Extra
+- [] live search functionality
+- [] filters/ sorting based on name, salary, percentage data
+- [] update/ delete feature
