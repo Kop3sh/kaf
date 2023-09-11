@@ -10,10 +10,33 @@ class SampleItemDetailsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Item Details'),
+        title: const Text('Customer Details'),
       ),
-      body: const Center(
-        child: Text('More Information Here'),
+      body: const Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'John Doe',
+            style: TextStyle(fontSize: 75),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Text(
+                '\$50k',
+                style: TextStyle(fontSize: 30),
+              ),
+              Text(
+                '@ 50%',
+                style: TextStyle(fontSize: 30),
+              ),
+            ],
+          ),
+          Text(
+            '=  \$25k',
+            style: TextStyle(fontSize: 50),
+          ),
+        ],
       ),
     );
   }

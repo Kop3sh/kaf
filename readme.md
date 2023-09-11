@@ -29,7 +29,7 @@ This task is preferably done using Django & flutter.
 - [] model schema and serialization
 - [] UI/UX
     - [x] listview for customer data
-    - [] single name view, showing salary and percentage data
+    - [x] single name view, showing salary and percentage data
     - [x] basic name search functionality
     - [x] upload excel data button
 - [] API integration
