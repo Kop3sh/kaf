@@ -25,7 +25,7 @@ This task is preferably done using Django & flutter.
     - [] reading data
 
 ## Frontend
-- [] flutter setup
+- [x] flutter setup
 - [] model schema and serialization
 - [] UI/UX
     - [] listview for customer data
