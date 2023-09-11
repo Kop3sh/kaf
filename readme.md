@@ -28,10 +28,10 @@ This task is preferably done using Django & flutter.
 - [x] flutter setup
 - [] model schema and serialization
 - [] UI/UX
-    - [] listview for customer data
+    - [x] listview for customer data
     - [] single name view, showing salary and percentage data
-    - [] basic name search functionality
-    - [] upload excel data button
+    - [x] basic name search functionality
+    - [x] upload excel data button
 - [] API integration
 ### Extra
 - [] live search functionality

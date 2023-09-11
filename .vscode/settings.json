@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
-        "backend"
+        "backend",
+        "frontend"
     ],
     "cmake.configureOnOpen": false
 }
