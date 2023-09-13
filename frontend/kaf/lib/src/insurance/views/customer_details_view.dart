@@ -38,7 +38,7 @@ class CustomerDetailsView extends StatelessWidget {
             ],
           ),
           Text(
-            '=  \$ ${customerData.salary * double.parse(customerData.percentage)}',
+            '=  \$ ${(customerData.salary * double.parse(customerData.percentage) / 100).ceil()}',
             style: const TextStyle(fontSize: 50),
           ),
         ],
