@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:io';
 
+import 'package:dio/dio.dart';
 import 'package:http/http.dart' as http;
 
 import 'customer.dart';
@@ -13,6 +15,8 @@ class CustomerNotFound implements Exception {}
 
 class CustomerSerializationFailure implements Exception {}
 
+class UploadFileFailure implements Exception {}
+
 class CustomerApiClient {
   CustomerApiClient({http.Client? httpClient})
       : _httpClient = httpClient ?? http.Client();
@@ -21,6 +25,7 @@ class CustomerApiClient {
   static const _baseUrl = 'localhost:8000';
 
   final http.Client _httpClient;
+  final dio = Dio(BaseOptions(baseUrl: 'http://localhost:8000'));
 
   /// Finds a [customer] `/customer/?name=(query)`.
   Future<List<Customer>> customerSearch(String? query) async {
@@ -50,6 +55,18 @@ class CustomerApiClient {
       );
     } on Exception {
       throw CustomerSerializationFailure();
+    }
+  }
+
+  Future<void> uploadExcelFile(File file) async {
+    final formData = FormData.fromMap({
+      'File': await MultipartFile.fromFile(file.path,
+          filename: file.path.split('/').last),
+    });
+    final response = await dio.post('/import-customer-data/', data: formData);
+
+    if (response.statusCode != 200) {
+      throw CustomerRequestFailure();
     }
   }
 }

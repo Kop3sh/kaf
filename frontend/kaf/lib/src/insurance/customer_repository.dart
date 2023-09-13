@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:kaf/src/insurance/customer.dart';
 import 'package:kaf/src/insurance/insurance_api_client.dart';
 
@@ -10,6 +12,10 @@ class CustomerRepositoy {
   Future<List<Customer>> getCustomersList() async {
     final customers = await _customerApiClient.customerSearch('');
     return customers;
+  }
+
+  Future<void> uploadFile(File file) async {
+    await _customerApiClient.uploadExcelFile(file);
   }
 
   Future<Customer> getCustomer(String? customerName) async {

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:kaf/src/insurance/customer.dart';
@@ -63,27 +65,12 @@ class CustomerCubit extends Cubit<CustomerState> {
     }
   }
 
-  // Future<void> refreshWeather() async {
-  //   if (!state.status.isSuccess) return;
-  //   if (state.weather == Weather.empty) return;
-  //   try {
-  //     final weather = Weather.fromRepository(
-  //       await _customerRepositoy.getWeather(state.weather.location),
-  //     );
-  //     final units = state.temperatureUnits;
-  //     final value = units.isFahrenheit
-  //         ? weather.temperature.value.toFahrenheit()
-  //         : weather.temperature.value;
-
-  //     emit(
-  //       state.copyWith(
-  //         status: WeatherStatus.success,
-  //         temperatureUnits: units,
-  //         weather: weather.copyWith(temperature: Temperature(value: value)),
-  //       ),
-  //     );
-  //   } on Exception {
-  //     emit(state);
-  //   }
-  // }
+  Future<void> uploadFile(File file) async {
+    try {
+      await _customerRepositoy.uploadFile(file);
+      fetchCustomerList();
+    } on Exception catch (e) {
+      print(e);
+    }
+  }
 }
