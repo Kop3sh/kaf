@@ -27,12 +27,11 @@ This task is preferably done using Django & flutter.
 ## Frontend
 - [x] flutter setup
 - [] model schema and serialization
-- [] UI/UX
-    - [x] listview for customer data
-    - [x] single name view, showing salary and percentage data
-    - [x] basic name search functionality
-    - [x] upload excel data button
-- [] API integration
+- [] UI, API, state
+    - [x] [] [] listview for customer data
+    - [x] [] [] single name view, showing salary and percentage data
+    - [x] [] [] basic name search functionality
+    - [x] [] [] upload excel data button
 ### Extra
 - [] live search functionality
 - [] filters/ sorting based on name, salary, percentage data
